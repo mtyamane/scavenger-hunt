@@ -101,6 +101,7 @@ function solve() {
 }
 
 // responsive screen
+// TODO: not mobile-ready!!
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
   setup();
