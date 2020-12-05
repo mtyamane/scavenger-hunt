@@ -4,6 +4,7 @@ var partyPopper1_load, partyPopper1_create;
 var partyPopper2_load, partyPopper2_create;
 var shaq_load, shaq_create;
 var squid_load, squid_create;
+var question = "What is the answer to the scavenger hunt?";
 
 function preload() {
   partyPopper1_load = loadImage("imgs/partyPopper1.png");
@@ -23,9 +24,15 @@ function setup() {
   yeah = loadSound('sounds/yeah.mp3');
 
   createCanvas(windowWidth, windowHeight);
+  background(220);
   
-  input = createInput();
-  submit = createButton('submit');
+  // only create buttons once
+  if (!input) {
+    input = createInput();
+  }
+  if (!submit) {
+    submit = createButton('submit'); 
+  }
 
   xInput = width/2 - (input.width/2) - (submit.width/2);
   yInput = height/2 + 40;
@@ -34,12 +41,11 @@ function setup() {
   submit.position(input.x + input.width, yInput);
   submit.mousePressed(solve);
 
-  background(220);
   textAlign(CENTER);
   textSize(70);
   text('Hello!', width/2, height/2);
   textSize(12);
-  text('What is the answer to the scavenger hunt?', width/2, height/2 +30);
+  text(question, width/2, height/2 +30);
 }
 
 function draw() {
@@ -53,7 +59,7 @@ function draw() {
       textAlign(CENTER);
       text('CORRECT!', width/2, height/2);
       textSize(12)
-      text('What is the answer to the scavenger hunt?', width/2, height/2 +30);
+      text(question, width/2, height/2 +30);
       image(partyPopper1_load, width/2 + 200, height/2 - 50, 100, 100);
       image(partyPopper2_load, width/2 - 300, height/2 - 50, 100, 100);
     }
@@ -90,5 +96,17 @@ function solve() {
     }
   }
   textSize(12)
-  text('What is the answer to the scavenger hunt?', width/2, height/2 +30);
+  text(question, width/2, height/2 +30);
+}
+
+// responsive screen
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  setup();
+}
+
+function keyPressed() {
+  if (keyCode === ENTER) {
+    solve();
+  }
 }
