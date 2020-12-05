@@ -77,7 +77,7 @@ function solve() {
     text('CORRECT!', width/2, height/2);
     solved = true;
     huzzah.play();
-    yeah.setVolume(0.08);
+    yeah.setVolume(0.05);
     yeah.play();
   } else if (inp == '') {
     background(220);
