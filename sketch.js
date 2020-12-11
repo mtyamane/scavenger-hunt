@@ -82,6 +82,7 @@ function solve() {
     solved = true;
     huzzah.play();
     yeah.setVolume(0.05);
+    yeah.setVolume(0, 11);
     yeah.play();
   } else if (inp == '') {
     background(220);
