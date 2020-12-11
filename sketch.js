@@ -4,6 +4,7 @@ var partyPopper1_load, partyPopper1_create;
 var partyPopper2_load, partyPopper2_create;
 var shaq_load, shaq_create;
 var squid_load, squid_create;
+var duck_load, duck_create;
 var question = "What is the answer to the scavenger hunt?";
 
 function preload() {
@@ -17,6 +18,8 @@ function preload() {
   squid_create = createImage("gifs/squid.gif");
   confetti_load = loadImage("gifs/confetti.gif");
   confetti_create = createImage("gifs/confetti.gif");
+  duck_load = loadImage("gifs/duck.gif");
+  duck_create = createImage("gifs/duck.gif");
 }
 
 function setup() {
@@ -62,10 +65,11 @@ function draw() {
       text(question, width/2, height/2 +30);
       image(partyPopper1_load, width/2 + 200, height/2 - 50, 100, 100);
       image(partyPopper2_load, width/2 - 300, height/2 - 50, 100, 100);
+      image(duck_load, width/2 - 100, height/2 - 300, 200, 200)
     }
 }
 
-ans = "lightly fried kiwi"
+ans = "duck"
 function solve() {
   let inp = input.value();  // save input
   input.value('');          // clear input
