@@ -72,7 +72,7 @@ function draw() {
     }
 }
 
-ans = "tomato"
+ans = "tomato";
 function solve() {
   let inp = input.value();  // save input
   input.value('');          // clear input
