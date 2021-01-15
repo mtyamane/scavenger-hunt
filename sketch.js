@@ -19,10 +19,10 @@ function preload() {
   squid_create = createImage("gifs/squid.gif");
   confetti_load = loadImage("gifs/confetti.gif");
   confetti_create = createImage("gifs/confetti.gif");
-  //duck_load = loadImage("gifs/duck.gif");
-  //duck_create = createImage("gifs/duck.gif");
-  tomato_load = loadImage("gifs/tomato.gif");
-  tomato_create = createImage("gifs/tomato.gif");
+  duck_load = loadImage("gifs/duck.gif");
+  duck_create = createImage("gifs/duck.gif");
+  //tomato_load = loadImage("gifs/tomato.gif");
+  //tomato_create = createImage("gifs/tomato.gif");
 }
 
 function setup() {
@@ -68,11 +68,11 @@ function draw() {
       text(question, width/2, height/2 +30);
       image(partyPopper1_load, width/2 + 200, height/2 - 50, 100, 100);
       image(partyPopper2_load, width/2 - 300, height/2 - 50, 100, 100);
-      image(tomato_load, width/2 - 100, height/2 - 260, 200, 200)
+      image(duck_load, width/2 - 100, height/2 - 260, 200, 200)
     }
 }
 
-ans = "tomato";
+ans = "duck";
 function solve() {
   let inp = input.value();  // save input
   input.value('');          // clear input
