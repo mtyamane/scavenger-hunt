@@ -72,7 +72,7 @@ function draw() {
     }
 }
 
-ans = "KIWI";
+ans = "duck";
 function solve() {
   let inp = input.value();  // save input
   input.value('');          // clear input
